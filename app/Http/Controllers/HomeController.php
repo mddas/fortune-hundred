@@ -25,17 +25,17 @@ class HomeController extends Controller
             $services = null;
         }
         //latest news
-         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()!=null){
-            $news_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%news%")->where('page_type','Group')->latest()->first()->id;
+         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()!=null){
+            $news_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()->id;
             $news = Navigation::query()->where('parent_page_id',$news_id)->latest()->first();
         }
         else{
             $news = null;
         }
-        //our specilist
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()!=null){
-            $specilist_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%specilist%")->where('page_type','Group')->latest()->first()->id;
-            $specilists = Navigation::query()->where('parent_page_id',$specilist_id)->latest()->get();
+        //our Events
+        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%event%")->where('page_type','Group')->latest()->first()!=null){
+            $event_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%event%")->where('page_type','Group')->latest()->first()->id;
+            $events = Navigation::query()->where('parent_page_id',$event_id)->latest()->get();
         }
         else{
             $specilists = null;

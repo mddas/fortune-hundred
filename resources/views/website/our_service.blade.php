@@ -14,86 +14,31 @@
                   Quasi earum aliquam hic vitae, similique explicabo!
                 </div>
                 <div class="text-left post-vacation-wrap offset-top-30">
-                  <article class="post-vacation">
-                    <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="
-                          background-image: url(https://images.pexels.com/photos/1202723/pexels-photo-1202723.jpeg?auto=compress&cs=tinysrgb&w=600);
-                        "></a>
-                    <div class="post-vacation-body">
-                      <div>
-                        <h6 class="post-vacation-title">
-                          <a href="abroad-study-country.html">USA</a>
-                        </h6>
-                      </div>
-                      <div class="offset-lg-top-10">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ab, odit?
-                        </p>
-                      </div>
-                      <div class="post-vacation-meta offset-top-10">
-                        <time class="text-dark" </div>
-                      </div>
-                  </article>
-                  <article class="post-vacation">
-                    <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="
-                          background-image: url(https://images.pexels.com/photos/968311/pexels-photo-968311.jpeg?auto=compress&cs=tinysrgb&w=600);
-                        "></a>
-                    <div class="post-vacation-body">
-                      <div>
-                        <h6 class="post-vacation-title">
-                          <a href="abroad-study-country.html">AUSTRALIA</a>
-                        </h6>
-                      </div>
-                      <div class="offset-lg-top-10">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ab, odit?
-                        </p>
-                      </div>
-                      <div class="post-vacation-meta offset-top-10">
-                        <time class="text-dark" </div>
-                      </div>
-                  </article>
-                  <article class="post-vacation">
-                    <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="
-                          background-image: url(https://images.pexels.com/photos/5014588/pexels-photo-5014588.jpeg?auto=compress&cs=tinysrgb&w=600);
-                        "></a>
-                    <div class="post-vacation-body">
-                      <div>
-                        <h6 class="post-vacation-title">
-                          <a href="abroad-study-country.html">SWITZERLAND</a>
-                        </h6>
-                      </div>
-                      <div class="offset-lg-top-10">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ab, odit?
-                        </p>
-                      </div>
-                      <div class="post-vacation-meta offset-top-10">
-                        <time class="text-dark" </div>
-                      </div>
-                  </article>
-                  <article class="post-vacation">
-                    <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="
-                          background-image: url(https://images.pexels.com/photos/9126131/pexels-photo-9126131.jpeg?auto=compress&cs=tinysrgb&w=600);
-                        "></a>
-                    <div class="post-vacation-body">
-                      <div>
-                        <h6 class="post-vacation-title">
-                          <a href="abroad-study-country.html">CANADA</a>
-                        </h6>
-                      </div>
-                      <div class="offset-lg-top-10">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ab, odit?
-                        </p>
-                      </div>
-                      <div class="post-vacation-meta offset-top-10">
-                        <time class="text-dark" </div>
-                      </div>
-                  </article>
+                  <!------our service start---->
+                  @if(isset($service))
+                  @foreach($services as $service)
+                    <article class="post-vacation">
+                        <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="
+                              background-image: url({{$service->banner_image}});
+                            "></a>
+                        <div class="post-vacation-body">
+                          <div>
+                            <h6 class="post-vacation-title">
+                              <a href="abroad-study-country.html">{{$service->caption}}</a>
+                            </h6>
+                          </div>
+                          <div class="offset-lg-top-10">
+                            <p>
+                             {{$service->short_content}}
+                            </p>
+                          </div>
+                          <div class="post-vacation-meta offset-top-10">
+                            <time class="text-dark" </div>
+                          </div>
+                      </article>
+                  @endforeach
+                  @endif       
+                  <!----our services End----->
                 </div>
                 <div class="offset-top-60">
                   <a class="servicesButton" href="services.html">
