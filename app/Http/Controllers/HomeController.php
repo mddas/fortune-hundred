@@ -78,13 +78,13 @@ class HomeController extends Controller
         else{
             $sliders = null;
         }
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%messaage%")->where('page_type','Group')->latest()->first()!=null){
-            $messaage_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%messaage%")->where('page_type','Group')->latest()->first()->id;
-            $messaage = Navigation::query()->where('parent_page_id',$misson_id)->latest()->get();
+        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()!=null){
+            $message_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()->id;
+            $message = Navigation::query()->where('parent_page_id',$misson_id)->latest()->get();
             //return $misson;
         }
         else{
-            $messaage = null;
+            $message = null;
         } 
    
         $global_setting = GlobalSetting::all()->first(); 
