@@ -14,7 +14,6 @@ class HomeController extends Controller
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Service')->where('page_type','!=','News & Events')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
         //return $menus;
         //return $menus->first()->submenus;
-
         //start Home
         //our service
          if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()!=null){
@@ -23,6 +22,14 @@ class HomeController extends Controller
         }
         else{
             $services = null;
+        }
+            //our university
+        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()!=null){
+            $university_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()->id;
+            $university = Navigation::query()->where('parent_page_id',$service_id)->latest()->get();
+        }
+        else{
+            $university = null;
         }
         //latest news
          if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()!=null){
@@ -89,7 +96,7 @@ class HomeController extends Controller
    
         $global_setting = GlobalSetting::all()->first(); 
        
-        return view("website.index")->with(['testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
+        return view("website.index")->with(['university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
     public function category($menu){
         //return $menu." this is category";
