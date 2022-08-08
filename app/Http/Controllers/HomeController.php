@@ -89,7 +89,7 @@ class HomeController extends Controller
    
         $global_setting = GlobalSetting::all()->first(); 
        
-        return view("website.index")->with(['message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders]);
+        return view("website.index")->with(['message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders]);
     }
     public function category($menu){
         //return $menu." this is category";
