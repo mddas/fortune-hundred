@@ -4,7 +4,7 @@
         <hr class="divider bg-madison" />
         <div class="range range-65 range-xs-center range-md-left offset-top-55 counters">
           <!---start---->
-          @if(isset($stastics))
+          @if(isset($statistics))
           @foreach($stastics as $stastic)
           <div class="cell-sm-6 cell-md-3">
             <div class="counter-type-1">
