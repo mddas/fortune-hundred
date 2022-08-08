@@ -118,3 +118,11 @@
   background-color: #cfa463;
   border: 1px solid #cfa463;
   opacity: 1; }
+
+  .sahid_contact_detail_raki form{
+    position: relative !important;
+  }
+  .sahid_contact_detail_raki{
+    padding: 50px 0;
+  
+  }
