@@ -26,7 +26,7 @@ class HomeController extends Controller
             //our university
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%university%")->where('page_type','Group')->latest()->first()!=null){
             $university_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%university%")->where('page_type','Group')->latest()->first()->id;
-            $university = Navigation::query()->where('parent_page_id',$service_id)->latest()->get();
+            $university = Navigation::query()->where('parent_page_id',$university_id)->latest()->get();
         }
         else{
             $university = null;
