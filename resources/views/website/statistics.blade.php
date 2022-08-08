@@ -5,7 +5,7 @@
         <div class="range range-65 range-xs-center range-md-left offset-top-55 counters">
           <!---start---->
           @if(isset($statistics))
-          @foreach($stastics as $stastic)
+          @foreach($statistics as $stastic)
           <div class="cell-sm-6 cell-md-3">
             <div class="counter-type-1">
               <span class="icon novi-icon icon-lg icon-outlined text-madison mdi mdi-school"></span>
