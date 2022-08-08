@@ -104,7 +104,8 @@
                             </ul>     
                            @endif                   
                       </li>
-                    @endforeach                   
+                    @endforeach   
+                    <li><a href="/contact">Contact</a></li>                
                   <!----end----->
                   </ul>
                   <div class="rd-navbar-search-mobile" id="rd-navbar-search-mobile">
