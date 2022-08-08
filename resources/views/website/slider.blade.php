@@ -10,7 +10,7 @@
                         rgba(27, 40, 92, 0.7),
                         rgba(28, 35, 61, 0.7)
                       ),
-                      url(images/slider/sliider2.jpeg);
+                      url({{$slider->banner_image}});
                     background-size: cover;
                   ">
                 <div class="swiper-slide-caption section-70">
