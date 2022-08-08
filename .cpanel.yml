@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/demoradiantnepal/fortune-hundred.demo.radiantnepal.com/
+    - export DEPLOYPATH=/home2/fortune100edu/public_html/
     - /bin/cp -r * $DEPLOYPATH
