@@ -78,18 +78,18 @@ class HomeController extends Controller
         else{
             $sliders = null;
         }
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%misson%")->where('page_type','Group')->latest()->first()!=null){
-            $misson_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%misson%")->where('page_type','Group')->latest()->first()->id;
-            $missons = Navigation::query()->where('parent_page_id',$misson_id)->latest()->get();
+        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%messaage%")->where('page_type','Group')->latest()->first()!=null){
+            $messaage_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%messaage%")->where('page_type','Group')->latest()->first()->id;
+            $messaage = Navigation::query()->where('parent_page_id',$misson_id)->latest()->get();
             //return $misson;
         }
         else{
-            $missons = null;
+            $messaage = null;
         } 
    
         $global_setting = GlobalSetting::all()->first(); 
        
-        return view("website.index")->with(['university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
+        return view("website.index")->with(['message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'specilists'=>$specilists,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message]);
     }
     public function category($menu){
         //return $menu." this is category";
