@@ -45,7 +45,7 @@ class HomeController extends Controller
             $events = Navigation::query()->where('parent_page_id',$event_id)->latest()->get();
         }
         else{
-            $specilists = null;
+            $events = null;
         }
         //our statistics
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%statistic%")->where('page_type','Group')->latest()->first()!=null){
@@ -89,7 +89,7 @@ class HomeController extends Controller
    
         $global_setting = GlobalSetting::all()->first(); 
        
-        return view("website.index")->with(['message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders]);
+        return view("website.index")->with(['events'=>$events,'message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders]);
     }
     public function category($menu){
         //return $menu." this is category";
