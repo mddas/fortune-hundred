@@ -10,7 +10,7 @@
             <div class="counter-type-1">
               <span class="icon novi-icon icon-lg icon-outlined text-madison mdi mdi-school"></span>
               <div class="h3 text-bold text-primary offset-top-15">
-                <span class="counter">343454</span><span class="symbol">{{$stastic->caption}}</span>
+                <span class="counter">{{$stastic->caption}}</span><span class="symbol"></span>
               </div>
               <hr class="divider bg-gray-light divider-sm" />
               <div class="offset-top-10">
