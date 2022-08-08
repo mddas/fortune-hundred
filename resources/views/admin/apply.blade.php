@@ -3,7 +3,7 @@
 
 
 @extends('layouts.master')
-    @section("contents")
+    @section("content")
        
 			<!--
 			=====================================================
@@ -34,28 +34,84 @@
 									</ul>
 								</div>
 							@endif
-						<h2>Apply To Job</h2>
+			
 					</div> <!-- /.theme-title-one -->
-					<div class="clearfix main-content no-gutters row">
-						<div class="col-lg-5 col-12"><div class="img-box"></div></div>
-						<div class="col-lg-7 col-12">
-							<div class="form-wrapper">
-								<form action="{{route('storeapply',$job_slug)}}" method="POST" class="theme-form-one form-validation" autocomplete="on" enctype='multipart/form-data'>
-                                    @csrf
-									<div class="row">
-										<div class="col-sm-6 col-12"><input type="text" placeholder="Name *" name="name"></div>
-										<div class="col-sm-6 col-12"><input type="text" placeholder="Phone *" name="number"></div>
-										<div class="col-sm-6 col-12"><input type="email" placeholder="Email *" name="email"></div>
-										<div class="col-sm-6 col-12"><input type="hidden" name="job_id" value="{{$job_slug}}"></div>
-										<div class="col-sm-6 col-12"><input type="file"  name="file"></div>
-										<span>upload resume</span>										
-									</div> <!-- /.row -->
-									<button type="submit" class="theme-button-one">Apply</button>
-								</form>
-							</div> <!-- /.form-wrapper -->
-						</div> <!-- /.col- -->
-					</div> <!-- /.main-content -->
-				</div> <!-- /.container -->
+
+
+				<!----md---->
+					<!------md----->
+					<section class="sahid_contact_detail_raki mt-5 p-5">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2>Are You Interest To Contact With Us?</h2>
+                <div class="add-contact mt-5">
+                   @if(isset($contacts))
+					@foreach($contacts as $cont)
+                        <span class="call-us wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"><i class="fas fa-map-marker-alt"></i><div class="contact_info_detail">
+                                <h4>{{$cont->caption}}</h4>
+                                <span><a href="#">{{$cont->long_content}}</a></span>
+                            </div></span>
+					@endforeach
+					
+					@else
+					 	<span class="call-us wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"><i class="fas fa-map-marker-alt"></i><div class="contact_info_detail">
+                                <h4>Location</h4>
+                                <span><a href="#">Nepal,9709823,kjsdl</a></span>
+                            </div></span>
+					@endif
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 ">
+                <div class="contact_form">
+                    <div role="form" class="wpcf7" id="wpcf7-f59-o1" lang="en-US" dir="ltr">
+                        <div class="screen-reader-response"></div>
+                        <h3 class="section-title text-center">Make An Appointment</h3>
+                       <form action="{{route('contactstore')}}" method="POST" class="theme-form-one form-validation" autocomplete="on" enctype='multipart/form-data'>
+									 @csrf	
+                    
+                            <p><label class="mt-4">Name</label>
+                                <span class="wpcf7-form-control-wrap your-name">
+                                    <input type="text" name="name">
+                                </span>
+                                
+                            </p>
+                            <p><label>Email</label>
+                                <span class="wpcf7-form-control-wrap your-email">
+                                    <input type="email"  name="email">
+                                </span>
+                                
+                            </p>
+                            <p><label>Number</label>
+                                <span class="wpcf7-form-control-wrap your-subject">
+                                    <input type="text"  name="number">
+                                </span>
+                                
+                            </p>
+                            <p>
+								<label>Message</label>
+                                <span class="wpcf7-form-control-wrap your-message">
+                                    <textarea  name="message"></textarea>
+                                </span>
+                                </label></p>
+								  <p>
+                                <span class=""><label>Upload Resume</label>
+
+                                    <input style="border:none;" type="file"  name="file">
+                                </span>
+                               
+                            <p><button type="submit" class="theme-button-one">Submit</button></p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+			<!----md end---->
+				<!---md end---->
 
 				<!--Contact Form Validation Markup -->
 				<!-- Contact alert -->
@@ -76,7 +132,6 @@
 			        </div>
 			    </div> <!-- End of .alert_wrapper -->
 			</div> <!-- /.contact-us-section -->
-        @include("website.partner")
 @endsection
 
 	
