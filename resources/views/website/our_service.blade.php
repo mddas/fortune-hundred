@@ -15,7 +15,7 @@
                 </div>
                 <div class="text-left post-vacation-wrap offset-top-30">
                   <!------our service start---->
-                  @if(isset($service))
+                  @if(isset($services))
                   @foreach($services as $service)
                     <article class="post-vacation">
                         <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="

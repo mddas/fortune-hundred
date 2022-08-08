@@ -85,14 +85,7 @@ class HomeController extends Controller
         }
         else{
             $missons = null;
-        }
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()!=null){
-            $message_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()->id;
-            $message = Navigation::query()->where('parent_page_id',$message_id)->latest()->first();
-        }
-        else{
-            $message = null;
-        }  
+        } 
    
         $global_setting = GlobalSetting::all()->first(); 
        
