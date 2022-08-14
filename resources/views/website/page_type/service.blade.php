@@ -28,7 +28,7 @@
                                         src="{{$service->banner_image}}"
                                         width="370" height="240" alt=""></a>
                                 <div class="post-news-body">
-                                    <h6><a href="{{route('subcategory',[$slug,$service->nav_name])}}">{{$service->caption}}</a></h6>
+                                    <h6><a href="{{route('subcategory',[$slug1,$service->nav_name])}}">{{$service->caption}}</a></h6>
 
                                     <div class="offset-top-10">
                                         <p>{{$service->short_content}}</p>
