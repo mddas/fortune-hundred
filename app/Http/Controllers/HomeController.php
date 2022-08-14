@@ -208,7 +208,6 @@ class HomeController extends Controller
     }
 
   public function subcategory($slug1,$submenu){
-        //return $menu."::".$submenu;
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Service')->where('page_type','!=','News & Events')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
         //return $menus->first()->submenus;
         $jobs = Navigation::query()->where('page_type','Job')->latest()->get();
@@ -271,14 +270,19 @@ class HomeController extends Controller
         //
        if(Navigation::all()->where('nav_name',$submenu)->count()>0){
             $subcategory_id = Navigation::all()->where('nav_name',$submenu)->first()->id;
+
             if(Navigation::all()->where('parent_page_id',$subcategory_id)->count()>0){
                 $subcategory_type = Navigation::all()->where('parent_page_id',$subcategory_id)->first()->page_type;//slug/slug2(GROUP)
             }
             else{
                 //return Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;
                 if(Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->count()>0){
-                    $subcategory_type = Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;//slug/slug2(group)
+                    $subcategory_type = Navigation::all()->where('nav_name',$submenu)->where('page_type','Normal')->first()->page_type;//slug/normal
                     //return $subcategory_type;
+                }
+                elseif(Navigation::all()->where('nav_name',$submenu)->where('page_type','Service')->count()>0){
+                    $subcategory_type = "Normal";//slug/Service
+                    
                 }
                 else{
                     return redirect('/');//submenu is page_type=Group and its internal items are empty
