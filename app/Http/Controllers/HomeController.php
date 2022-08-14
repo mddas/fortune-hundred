@@ -298,7 +298,7 @@ class HomeController extends Controller
         elseif($subcategory_type == "Service"){
             //return "return to view job";
             $services = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
-            return view("website.page_type.service")->with(['slug1'=>$slug1,'services'=>$services,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            return view("website.page_type.service")->with(['slug1'=>$slug1,'services'=>$services,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail,'slug'=>$slug1]);
         }
         elseif($subcategory_type == "Normal"){
             $normal = Navigation::find($subcategory_id);
