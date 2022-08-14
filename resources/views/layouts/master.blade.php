@@ -93,20 +93,20 @@
                   </div>
                   <ul class="rd-navbar-nav">
                     <!----start---->
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Homes</a></li>
                     @foreach($menus as $menu)
                       <li>
                         <a href="{{$menu->nav_name}}">{{$menu->caption}}</a>
                            @if($menu->childs->count()>0)
                             <ul class="rd-navbar-dropdown">
                               @foreach($menu->childs as $submenu)
-                                 <li><a href="{{route('subcategory',[$menu,$submenu])}}">{{$submenu->caption}}</a></li>
+                                 <li><a href="{{route('subcategory',[$menu->nav_name,$submenu->nav_name])}}">{{$submenu->caption}}</a></li>
                               @endforeach
                             </ul>     
                            @endif                   
                       </li>
                     @endforeach   
-                    <li><a href="/contact">Contact</a></li>                
+                    <!-- <li><a href="/contact">Contact</a></li>                 -->
                   <!----end----->
                   </ul>
                   <div class="rd-navbar-search-mobile" id="rd-navbar-search-mobile">
