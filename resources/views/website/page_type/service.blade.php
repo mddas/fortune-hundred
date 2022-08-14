@@ -31,7 +31,7 @@
                                     <h6><a href="services-detail.html">{{$service->caption}}</a></h6>
 
                                     <div class="offset-top-10">
-                                        <p>{{$service->short_content}}</p>
+                                        <p>{{$service->long_content}}</p>
                                     </div>
 
                                 </div>
