@@ -174,7 +174,6 @@ class HomeController extends Controller
         else{
             $category_type = null;
         }
-        return $category_type;
         
         if($category_type == "Photo Gallery"){//albums
             //return "return to page gallary";
