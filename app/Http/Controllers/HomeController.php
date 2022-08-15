@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\GlobalSetting;
 use App\Models\NavigationItems;
+use App\Models\NavigationVideoItems;
 use App\Models\Navigation;
 use Illuminate\Http\Request;
 use App\Job;
