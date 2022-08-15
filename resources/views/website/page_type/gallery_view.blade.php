@@ -3,7 +3,6 @@
 
 	@extends('layouts.master')
     @section("content")
-		@include("website.navbar")		
 			<div class="theme-inner-banner">
 				<div class="overlay">
 					<div class="container">
@@ -58,6 +57,5 @@
 				}
 			});
 	    </script> -->
-        @include("website.company_partner")
     @endsection
     
