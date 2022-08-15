@@ -25,7 +25,7 @@
 							<!----gallary data----->
 							@foreach($photos as $photo)
 								<iframe width="420" height="315"
-									src="https://www.youtube.com/embed/tgbNymZ7vqY">
+									src="{{$photo->vlink}}">
 								</iframe>
 							@endforeach
 						  <!----gallary data close----->
