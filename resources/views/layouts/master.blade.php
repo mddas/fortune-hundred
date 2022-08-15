@@ -15,6 +15,7 @@
     href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic" />
   <link rel="stylesheet" href="/website/css/style.css" />
   <link rel="stylesheet" href="/website/css/novi.css" />
+   <link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
   <!-- <link rel="stylesheet" href="assets/admin/css/contact.css" /> -->
   <!-- <link rel="stylesheet" href="assets/admin/css/bootstrap.min.css" /> -->
 </head>
@@ -280,6 +281,33 @@
       }
     })
   </script>
+
+  		            	<!-- gllery js -->
+	    <script src="/website/js/gallery/picturefill.min.js"></script>
+	    <script src="/website/js/gallery/lightgallery.js"></script>
+	    <script src="/website/js/gallery/lg-pager.js"></script>
+	    <script src="/website/js/gallery/lg-autoplay.js"></script>
+	    <script src="/website/js/gallery/lg-fullscreen.js"></script>
+	    <script src="/website/js/gallery/lg-zoom.js"></script>
+	    <script src="/website/js/gallery/lg-hash.js"></script>
+	    <script src="/website/js/gallery/lg-share.js"></script>
+        <script>
+        lightGallery(document.getElementById('lightgallery'));
+
+        $(function() {
+        var selectedClass = "";
+        $(".filter").click(function(){
+        selectedClass = $(this).attr("data-rel");
+        $("#lightgallery").fadeTo(100, 0.1);
+        $("#lightgallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+        setTimeout(function() {
+        $("."+selectedClass).fadeIn().addClass('animation');
+        $("#lightgallery").fadeTo(300, 1);
+        }, 300);
+        });
+        });
+    	</script>
+	    <!--End gllery js -->
 </body>
 
 </html>
