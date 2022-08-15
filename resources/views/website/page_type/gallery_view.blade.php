@@ -27,7 +27,7 @@
 								<div class="item col-md-3" data-src="/uploads/photo_gallery/{{$photo->file}}" data-sub-html="{{$photo->caption}}">
 									<a href="">
 										<img src="/uploads/photo_gallery/{{$photo->file}}" alt="{{$photo->caption}}"/>
-										<div class="gallery-overlay"><img src="/website/images/home/plus.png"></div>
+										<div class="gallery-overlay"><img src="/website/images/plus.png"></div>
 									</a>
 								</div>
 							@endforeach
