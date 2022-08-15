@@ -30,7 +30,7 @@
                             <div class="unit unit-lg unit-lg-horizontal">
                                 <div class="unit-body">
                                     <div class="post-event-body text-lg-left">
-                                        <h6><a href="{{route('galleryview',$albumb->nav_name)}}">{{$albumb->caption}}</a></h6>
+                                        <h6><a @if(isset($video)) href="{{route('videogallery',$albumb->nav_name)}}" @else href="{{route('galleryview',$albumb->nav_name)}} @endif">{{$albumb->caption}}</a></h6>
 
                                     </div>
                                 </div>
