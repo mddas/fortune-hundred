@@ -25,7 +25,7 @@
 							<!----gallary data----->
 							@foreach($photos as $photo)
 								<iframe width="420" height="315"
-									src="{{$photo->vlink}}">
+									src="{{$photo->link}}">
 								</iframe>
 							@endforeach
 						  <!----gallary data close----->
