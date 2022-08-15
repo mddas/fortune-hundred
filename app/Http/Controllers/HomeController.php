@@ -336,5 +336,13 @@ class HomeController extends Controller
         $global_setting = GlobalSetting::all()->first();
         return view("website.all_category")->with(['job_categories'=>$job_categories,'global_setting'=>$global_setting,'menus'=>$menus]);
     }
+    public function GalleryView($slug){
+        $navigataion_id = Navigation::where('nav_name',$slug)->first()->id;        
+        $photos = NavigationItems::where('navigation_id',$navigataion_id)->get();
+        //return $photos;
+         $global_setting = GlobalSetting::all()->first(); 
+         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
+         return view("website.gallery_view")->with(['photos'=>$photos,'menus'=>$menus,'global_setting'=>$global_setting]);
+    }
   
 }
