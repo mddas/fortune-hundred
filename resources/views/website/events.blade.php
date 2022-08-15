@@ -14,7 +14,7 @@
                   alt="" width="420" height="420" />
                 <div class="post-event-overlay context-dark">
                   <div class="offset-top-20">
-                    <a class="btn btn-default" href="event-page.html">Learn More</a>
+                    <a class="btn btn-default" href="{{route('readmore',$event->nav_name)">Learn More</a>
                   </div>
                 </div>
                 <div class="post-event-meta text-center">
