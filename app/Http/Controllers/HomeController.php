@@ -329,7 +329,6 @@ class HomeController extends Controller
     }
     public function ReadMore($slug){
         $normal = Navigation::where('nav_name',$slug)->first();
-        return $normal;
         //return $normal;
         $global_setting = GlobalSetting::all()->first(); 
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
