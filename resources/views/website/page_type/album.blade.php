@@ -24,7 +24,7 @@
                     <div class="cell-sm-6 cell-md-5 cell-xl-3">
                         <article class="post-event">
                             <div class="post-event-img-overlay"><img class="img-responsive"
-                                    src="{{$albumbalbumb->banner_image}}"
+                                    src="{{$albumb->banner_image}}"
                                     alt="" width="420" height="420">
                             </div>
                             <div class="unit unit-lg unit-lg-horizontal">
