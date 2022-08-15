@@ -6,7 +6,7 @@
 			<div class="theme-inner-banner">
 				<div class="overlay">
 					<div class="container">
-						<h2>Gallery</h2>
+						<h2>Video Gallery</h2>
 					</div> <!-- /.container -->
 				</div> <!-- /.overlay -->
 			</div> <!-- /.theme-inner-banner -->
@@ -24,12 +24,9 @@
 		                <div class="row" id="lightgallery"> 
 							<!----gallary data----->
 							@foreach($photos as $photo)
-								<div class="item col-md-3" data-src="/uploads/photo_gallery/{{$photo->file}}" data-sub-html="{{$photo->caption}}">
-									<a href="">
-										<img src="/uploads/photo_gallery/{{$photo->file}}" alt="{{$photo->caption}}"/>
-										<div class="gallery-overlay"><img src="/website/images/plus.png"></div>
-									</a>
-								</div>
+								<iframe width="420" height="315"
+									src="https://www.youtube.com/embed/tgbNymZ7vqY">
+								</iframe>
 							@endforeach
 						  <!----gallary data close----->
 		                </div>
