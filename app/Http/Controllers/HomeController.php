@@ -299,6 +299,10 @@ class HomeController extends Controller
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
+        if($subcategory_type == "Video Gallery"){//Albumb 
+            $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
+            return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+        }
         elseif($subcategory_type == "Service"){
             //return "return to view job";
             $services = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
