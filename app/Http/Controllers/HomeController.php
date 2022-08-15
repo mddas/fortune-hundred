@@ -328,7 +328,7 @@ class HomeController extends Controller
         return view("website.job_detail_single_page")->with(['job'=>$job,'menus'=>$menus,'global_setting'=>$global_setting]);
     }
     public function ReadMore($slug){
-        $normal = Navigation::where('id',$slug)->first();
+        $normal = Navigation::where('nav_name',$slug)->first();
         return $normal;
         //return $normal;
         $global_setting = GlobalSetting::all()->first(); 
