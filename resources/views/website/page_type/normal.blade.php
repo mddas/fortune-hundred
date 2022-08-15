@@ -11,7 +11,7 @@
 
           <ul class="list-inline list-inline-lg list-inline-dashed p">
             <li><a href="#">{{$slug1 ?? ''}}</a></li>
-            <li>{{$slug_detail->first()->nav_name ?? ''}}</li>
+            <li>{{$slug_detail->nav_name ?? ''}}</li>
           </ul>
 
         </div>
