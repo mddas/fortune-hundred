@@ -183,8 +183,7 @@
 
     @yield('content')
 
-
-    <footer class="section page-footer">
+<footer class="section page-footer">
       <div class="novi-background bg-cover bg-default">
         <div class="shell-wide">
           <div class="hr bg-gray-light"></div>
@@ -192,22 +191,16 @@
         <div class="section-60">
           <div class="shell">
             <div class="range range-50 range-lg-justify range-xs-center">
-              <div class="cell-md-3 cell-lg-3">
-                <a class="footerLogo" href="/">
-                  <img src="/uploads/icons/{{$global_setting->site_logo}}" alt="" srcset="/uploads/icons/{{$global_setting->site_logo}}" /></a>
-                <div class="offset-top-30 text-center">
-                  <ul class="list-inline list-inline-xs list-inline-madison">
-                    <li>
-                      <a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled" href="{{$global_setting->facebook}}"></a>
-                    </li>
-                    <li>
-                      <a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled" href="{{$global_setting->twitter}}"></a>
-                    </li>
-
-                    <li>
-                      <a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled" href="{{$global_setting->other}}"></a>
-                    </li>
-                  </ul>
+              <div class="cell-xs-10 cell-md-8 cell-lg-4 text-lg-left">
+                <a class="footerLogo" href="index.html">
+                  <img src="images/logo/logo.jpg" alt="" srcset="images/logo/logo.jpg" /></a>
+                <!-- <div class="text-subline"></div> -->
+                <div class="offset-top-30 text-left">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Aliquid quibusdam praesentium veniam, numquam labore
+                    minima..
+                  </p>
                 </div>
               </div>
               <div class="cell-xs-10 cell-md-5 cell-lg-4 text-lg-left">
@@ -221,8 +214,8 @@
                           <span class="icon novi-icon mdi mdi-phone text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body">
-                          <a class="text-dark" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}},</a><a
-                            class="reveal-block reveal-md-inline-block text-dark" href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}}</a>
+                          <a class="text-dark" href="tel:#">+977-9851026668, ,</a><a
+                            class="reveal-block reveal-md-inline-block text-dark" href="tel:#">+977-9815356075,</a>
                         </div>
                       </div>
                     </li>
@@ -232,7 +225,7 @@
                           <span class="icon novi-icon mdi mdi-map-marker text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body text-left">
-                          <a class="text-dark" href="#">{{$global_setting->website_full_address}}
+                          <a class="text-dark" href="#">Bagbazar-2,Kathnandu ,Napal
                           </a>
                         </div>
                       </div>
@@ -243,9 +236,25 @@
                           <span class="icon novi-icon mdi mdi-email-open text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body">
-                          <a href="mailto:{{$global_setting->site_email}}">{{$global_setting->site_email}}</a>
+                          <a href="mailto:#">fortune100.edu.np@gmail.com </a>
                         </div>
                       </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cell-md-3 cell-lg-3">
+                <h6 class="text-bold">Follow us</h6>
+                <div class="offset-top-30 text-center">
+                  <ul class="list-inline list-inline-xs list-inline-madison">
+                    <li>
+                      <a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled" href="#"></a>
+                    </li>
+                    <li>
+                      <a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled" href="#"></a>
+                    </li>
+                    <li>
+                      <a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled" href="#"></a>
                     </li>
                   </ul>
                 </div>
