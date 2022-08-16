@@ -1,8 +1,44 @@
+@php
+    $global_setting = app\Models\GlobalSetting::all()->first();
+    if(isset($normal)){
+        $seo = $normal;
+    }
+    elseif(isset($job)){
+        $seo = $job;
+    }
+@endphp
 <!DOCTYPE html>
 <html class="wide wow-animation scrollTo" lang="en">
 
 <head>
-  <title>Home</title>
+       <!-----SEO--------->
+
+  <title>{{$seo->page_titile ?? $global_setting->page_title}}</title>
+  <meta name="title" content="{{$seo->page_titile ?? $global_setting->page_title}}">
+  <meta name="description" content="{{$seo->page_description ?? $global_setting->page_description}}">
+  <meta name="keywords" content="{{$seo->page_keyword ?? $global_setting->page_keyword}}">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="1 days">
+  <meta name="author" content="{{$global_setting->site_name ?? ''}}">
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{$global_setting->website_full_address ?? ''}}">
+  <meta property="og:title" content="{{$seo->page_title ?? $global_setting->page_title}}">
+  <meta property="og:description" content="{{$seo->page_description ?? $global_setting->page_description}}">
+  <meta property="og:image" content="{{$seo->banner_image ?? '/uploads/icons/'.$global_setting->site_logo}}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{$global_setting->website_full_address ?? ''}}">
+  <meta property="twitter:title" content="{{$seo->page_title ?? $global_setting->page_title}}">
+  <meta property="twitter:description" content="{{$seo->page_description ?? $global_setting->page_description}}">
+  <meta property="twitter:image" content="{{$seo->banner_image ?? '/uploads/icons/'.$global_setting->site_logo}}">
+
+<!-----END SEO------->
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="viewport"
@@ -10,7 +46,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta name="keywords" content="intense web design multipurpose template" />
   <meta name="date" content="Dec 26" />
-  <link rel="icon" href="images/logo/logo.jpg" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="56x56" href="{{$global_setting->favicon}}">
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic" />
   <link rel="stylesheet" href="/website/css/style.css" />
@@ -56,13 +92,13 @@
                           <span class="icon novi-icon mdi mdi-phone text-middle" style="color: #2c3591"></span>
                         </div>
                         <div class="unit-body">
-                          <a class="reveal-block" href="tel:#">+977-9851026668,</a><a href="tel:#">+977-9815356075,</a>
+                          <a class="reveal-block" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}},</a><a href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}},</a>
                         </div>
                       </div>
                     </div>
                     <div class="cell-md-3 text-center">
                       <div class="rd-navbar-brand">
-                        <a class="reveal-inline-block" href="index.html"><img src="/website/images/logo/logo.jpg" alt=""
+                        <a class="reveal-inline-block" href="/"><img src="/uploads/icons/{{$global_setting->site_logo}}" alt=""
                             width="191" height="80" /></a>
                       </div>
                     </div>
@@ -73,7 +109,7 @@
                             <span class="icon novi-icon mdi mdi-map-marker text-middle"></span>
                           </div>
                           <div class="unit-body">
-                            <a href="#"> Bagbazar-2,Kathmandu ,Napal</a>
+                            <a href="#">{{$global_setting->website_full_address}}</a>
                           </div>
                         </div>
                       </div>
@@ -95,7 +131,7 @@
                   </div>
                   <ul class="rd-navbar-nav">
                     <!----start---->
-                    <li><a href="index.html">Homes</a></li>
+                    <li><a href="/">Home</a></li>
                     @foreach($menus as $menu)
                       <li>
                         <a href="{{$menu->nav_name}}">{{$menu->caption}}</a>
@@ -157,19 +193,19 @@
           <div class="shell">
             <div class="range range-50 range-lg-justify range-xs-center">
               <div class="cell-md-3 cell-lg-3">
-                <a class="footerLogo" href="index.html">
-                  <img src="/website/images/logo/logo.jpg" alt="" srcset="images/logo/logo.jpg" /></a>
+                <a class="footerLogo" href="/">
+                  <img src="/uploads/icons/{{$global_setting->site_logo}}" alt="" srcset="/uploads/icons/{{$global_setting->site_logo}}" /></a>
                 <div class="offset-top-30 text-center">
                   <ul class="list-inline list-inline-xs list-inline-madison">
                     <li>
-                      <a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled" href="#"></a>
+                      <a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled" href="{{$global_setting->facebook}}"></a>
                     </li>
                     <li>
-                      <a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled" href="#"></a>
+                      <a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled" href="{{$global_setting->twitter}}"></a>
                     </li>
 
                     <li>
-                      <a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled" href="#"></a>
+                      <a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled" href="{{$global_setting->other}}"></a>
                     </li>
                   </ul>
                 </div>
@@ -185,8 +221,8 @@
                           <span class="icon novi-icon mdi mdi-phone text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body">
-                          <a class="text-dark" href="tel:#">+977-9851026668, ,</a><a
-                            class="reveal-block reveal-md-inline-block text-dark" href="tel:#">+977-9815356075,</a>
+                          <a class="text-dark" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}} ,</a><a
+                            class="reveal-block reveal-md-inline-block text-dark" href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}},</a>
                         </div>
                       </div>
                     </li>
@@ -196,7 +232,7 @@
                           <span class="icon novi-icon mdi mdi-map-marker text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body text-left">
-                          <a class="text-dark" href="#">Bagbazar-2,Kathnandu ,Napal
+                          <a class="text-dark" href="#">{{$global_setting->website_full_address}
                           </a>
                         </div>
                       </div>
@@ -207,7 +243,7 @@
                           <span class="icon novi-icon mdi mdi-email-open text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body">
-                          <a href="mailto:#">fortune100.edu.np@gmail.com </a>
+                          <a href="mailto:{{$global_setting->site_email}}">{{$global_setting->site_email}}</a>
                         </div>
                       </div>
                     </li>
@@ -219,9 +255,7 @@
                 <div class="text-subline"></div>
                 <div class="offset-top-30 text-left">
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Aliquid quibusdam praesentium veniam, numquam labore
-                    minima..
+                    {{$global_setting->page_description}}
                   </p>
                 </div>
                 <div class="offset-top-10">
