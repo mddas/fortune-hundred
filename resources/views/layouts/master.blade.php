@@ -221,7 +221,7 @@
                           <span class="icon novi-icon mdi mdi-phone text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body">
-                          <a class="text-dark" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}} </a><a
+                          <a class="text-dark" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}},</a><a
                             class="reveal-block reveal-md-inline-block text-dark" href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}}</a>
                         </div>
                       </div>
