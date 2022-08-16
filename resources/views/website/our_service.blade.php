@@ -10,8 +10,7 @@
                 <h2 class="text-bold">Our Services</h2>
                 <hr class="divider hr-sm-left-0 bg-white" />
                 <div class="offset-top-30 offset-md-top-30 text-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quasi earum aliquam hic vitae, similique explicabo!
+                  Want to study abroad ? Get free expert advice and information on colleges, courses, exams, admission, student visa, and application process to study overseas.
                 </div>
                 <div class="text-left post-vacation-wrap offset-top-30">
                   <!------our service start---->
@@ -24,7 +23,7 @@
                         <div class="post-vacation-body">
                           <div>
                             <h6 class="post-vacation-title">
-                              <a href="abroad-study-country.html">{{$service->caption}}</a>
+                              <a href="/study-abroad">{{$service->caption}}</a>
                             </h6>
                           </div>
                           <div class="offset-lg-top-10">
@@ -41,7 +40,7 @@
                   <!----our services End----->
                 </div>
                 <div class="offset-top-60">
-                  <a class="servicesButton" href="/services">
+                  <a class="servicesButton" href="/study-abroad">
                     View All Services</a>
                 </div>
               </div>
