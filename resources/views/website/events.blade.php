@@ -32,7 +32,7 @@
                     <h6><a href="event-page.html">{{$event->caption}}</a></h6>
                     <ul class="list-inline list-inline-xs">
                       <li>
-                        <a href="#"><span class="icon novi-icon icon-xxs mdi mdi-account-outline text-middle"
+                        <a href="{{route('readmore',$event->nav_name)}}"><span class="icon novi-icon icon-xxs mdi mdi-account-outline text-middle"
                             style="color: #2c3590"></span><span class="inset-left-10 text-dark text-middle">{{$event->short_content}}</span></a>
                       </li>
                     </ul>

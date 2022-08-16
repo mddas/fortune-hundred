@@ -41,7 +41,7 @@
                   <!----our services End----->
                 </div>
                 <div class="offset-top-60">
-                  <a class="servicesButton" href="/Services">
+                  <a class="servicesButton" href="/services">
                     View All Services</a>
                 </div>
               </div>

@@ -29,8 +29,8 @@
                         <div class="offset-top-20 offset-xl-top-30" data-caption-animate="fadeInUp"
                           data-caption-delay="400">
                           <div class="group-xl group-middle">
-                            <a class="btn btn-primary" href="#">Start a Journey</a><a class="btn btn-default"
-                              href="#">Contact us</a>
+                            <a class="btn btn-primary" href="/study-abroad">Start a Journey</a><a class="btn btn-default"
+                              href="/contact">Contact us</a>
                           </div>
                         </div>
                       </div>

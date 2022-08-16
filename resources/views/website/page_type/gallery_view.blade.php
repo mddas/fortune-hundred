@@ -25,6 +25,7 @@
 							<!----gallary data----->
 							@foreach($photos as $photo)
 								<div class="item col-md-3" data-src="/uploads/photo_gallery/{{$photo->file}}" data-sub-html="{{$photo->caption}}">
+									<h5>sdsjasdad lajsld</h5>
 									<a href="">
 										<img src="/uploads/photo_gallery/{{$photo->file}}" alt="{{$photo->caption}}"/>
 										<div class="gallery-overlay"><img src="/website/images/plus.png"></div>

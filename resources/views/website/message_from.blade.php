@@ -20,7 +20,7 @@
                 {{$message->long_content ?? ''}}
               </p>
             </div>
-            <a href="/About/massage1" class="message_readMore"> Read More</a>
+            <a href="/about/massage-from-chairman" class="message_readMore"> Read More</a>
 
           </div>
         </div>
