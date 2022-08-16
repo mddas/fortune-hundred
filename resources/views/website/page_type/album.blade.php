@@ -74,7 +74,7 @@
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
-                <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                <img src="/website/images/gallery/gallery.webp" alt="" width="370" height="370" />
                 <a href="image-item.html">Travel</a>
               </div>
 
@@ -84,7 +84,7 @@
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
-                <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                <img src="/website/images/gallery/gallery.webp" alt="" width="370" height="370" />
                 <a href="image-item.html">Travel</a>
               </div>
 
@@ -93,7 +93,7 @@
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
-                <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                <img src="/website/images/gallery/gallery.webp" alt="" width="370" height="370" />
                 <a href="image-item.html">Travel</a>
               </div>
 
@@ -102,7 +102,7 @@
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
-                <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                <img src="/website/images/gallery/gallery.webp" alt="" width="370" height="370" />
                 <a href="image-item.html">Travel</a>
               </div>
 
@@ -111,7 +111,7 @@
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
-                <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                <img src="/website/images/gallery/gallery.webp" alt="" width="370" height="370" />
                 <a href="image-item.html">Travel</a>
               </div>
 
@@ -120,7 +120,7 @@
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
-                <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                <img src="/website/images/gallery/gallery.webp" alt="" width="370" height="370" />
                 <a href="image-item.html">Travel</a>
               </div>
             </div>
