@@ -23,6 +23,7 @@
         <div class="offset-top-60">
           <div class="range range-30 range-xs-center" data-lightgallery="group">
             <!---start--->
+            @foreach($albumbs as $albumb)
             <div class="cell-xs-10 cell-sm-6 cell-md-4">
 
               <div class="image_gallery_photo">
