@@ -92,7 +92,7 @@
                           <span class="icon novi-icon mdi mdi-phone text-middle" style="color: #2c3591"></span>
                         </div>
                         <div class="unit-body">
-                          <a class="reveal-block" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}},</a><a href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}},</a>
+                          <a class="reveal-block" href="tel:{{$global_setting->phone}}">{{$global_setting->phone}},</a><a href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}}</a>
                         </div>
                       </div>
                     </div>
@@ -134,7 +134,7 @@
                     <li><a href="/">Home</a></li>
                     @foreach($menus as $menu)
                       <li>
-                        <a href="{{$menu->nav_name}}">{{$menu->caption}}</a>
+                        <a href="@if($menu->nav_name=='gallary') # @else {{$menu->nav_name}} @endif">{{$menu->caption}}</a>
                            @if($menu->childs->count()>0)
                             <ul class="rd-navbar-dropdown">
                               @foreach($menu->childs as $submenu)
