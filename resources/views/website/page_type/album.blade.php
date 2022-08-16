@@ -33,6 +33,7 @@
 
 
             </div>
+            @endforeach
             <!-----end foreach--->
           </div>
         </div>
