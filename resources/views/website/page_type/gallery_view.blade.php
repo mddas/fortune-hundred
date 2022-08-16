@@ -3,41 +3,7 @@
 
 	@extends('layouts.master')
     @section("content")
-			<div class="theme-inner-banner">
-				<div class="overlay">
-					<div class="container">
-						<h2>Gallery</h2>
-					</div> <!-- /.container -->
-				</div> <!-- /.overlay -->
-			</div> <!-- /.theme-inner-banner -->
 
-
-			<!-- 
-			=============================================
-				gallery
-			============================================== 
-			-->
-			@if(isset($photos))
-			<section class="section-spacing">
-				<div class="container">
-					<div class="gallery-view">
-		                <div class="row" id="lightgallery"> 
-							<!----gallary data----->
-							
-								<div class="item col-md-3" data-src="/uploads/photo_gallery/{{$photo->file}}" data-sub-html="{{$photo->caption}}">
-									<h5>sdsjasdad lajsld</h5>
-									<a href="">
-										<img src="/uploads/photo_gallery/{{$photo->file}}" alt="{{$photo->caption}}"/>
-										<div class="gallery-overlay"><img src="/website/images/plus.png"></div>
-									</a>
-								</div>
-							
-						  <!----gallary data close----->
-		                </div>
-		            </div>
-          		</div>
-			</section>
-		  @endif
 <!-----yakendra---->
 <section class="section breadcrumb-modern context-dark parallax-container" style="background-image:   linear-gradient(
                               rgba(27, 40, 92, 0.7),
