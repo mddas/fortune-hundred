@@ -32,7 +32,7 @@
                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
                             <figure class="thumbnail-classic thumbnail-md">
                                 <div class="thumbnail-classic-img-wrap">
-                                    <img src="images/gallery/gallery.webp" alt="" width="370" height="370" />
+                                    <img src="/uploads/photo_gallery/{{$photo->file}}" alt="" width="370" height="370" />
                                 </div>
                                 <figcaption class="thumbnail-classic-caption text-center">
                                     <div>
