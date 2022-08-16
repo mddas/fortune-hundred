@@ -193,7 +193,7 @@
             <div class="range range-50 range-lg-justify range-xs-center">
               <div class="cell-xs-10 cell-md-8 cell-lg-4 text-lg-left">
                 <a class="footerLogo" href="index.html">
-                  <img src="/website/images/logo/logo.jpg" alt="" srcset="images/logo/logo.jpg" /></a>
+                  <img src="website/images/logo/logo.jpg" alt="" srcset="images/logo/logo.jpg" /></a>
                 <!-- <div class="text-subline"></div> -->
                 <div class="offset-top-30 text-left">
                   <p>
