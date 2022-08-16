@@ -232,7 +232,7 @@
                           <span class="icon novi-icon mdi mdi-map-marker text-middle icon-xs text-madison"></span>
                         </div>
                         <div class="unit-body text-left">
-                          <a class="text-dark" href="#">{{$global_setting->website_full_address}
+                          <a class="text-dark" href="#">{{$global_setting->website_full_address}}
                           </a>
                         </div>
                       </div>
