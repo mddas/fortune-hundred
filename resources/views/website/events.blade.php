@@ -29,7 +29,7 @@
               <div class="unit unit-lg unit-lg-horizontal">
                 <div class="unit-body">
                   <div class="post-event-body text-lg-left">
-                    <h6><a href="event-page.html">{{$event->caption}}</a></h6>
+                    <h6><a href="{{route('readmore',$event->nav_name)}}">{{$event->caption}}</a></h6>
                     <ul class="list-inline list-inline-xs">
                       <li>
                         <a href="{{route('readmore',$event->nav_name)}}"><span class="icon novi-icon icon-xxs mdi mdi-account-outline text-middle"
