@@ -285,6 +285,10 @@ class HomeController extends Controller
                     $subcategory_type = "Normal";//slug/Service
                     
                 }
+                elseif(Navigation::all()->where('nav_name',$submenu)->where('page_type','Video Gallery')->count()>0){
+                    $subcategory_type = "Video Gallery";//slug/Service
+                    
+                }
                 else{
                     return redirect('/');//submenu is page_type=Group and its internal items are empty
                 }
@@ -294,15 +298,15 @@ class HomeController extends Controller
         else{
              $subcategory_type = null;
          }
-        // return $subcategory_type;
          
         if($subcategory_type == "Photo Gallery"){//Albumb 
             $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         if($subcategory_type == "Video Gallery"){//Albumb 
-            $albumbs = Navigation::query()->where('parent_page_id',$subcategory_id)->latest()->get();
-            return view("website.page_type.album")->with(['video'=>"video",'slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            // return NavigationVideoItems::all();
+            $photos = NavigationVideoItems::where('navigation_id',$subcategory_id)->get();
+            return view("website.page_type.video_view")->with(['photos'=>$photos,'slug1'=>$slug1,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Service"){
             //return "return to view job";

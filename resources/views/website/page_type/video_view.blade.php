@@ -25,91 +25,19 @@
                 <hr class="divider bg-madison" />
                 <div class="offset-top-60">
                     <div class="range range-30 range-xs-center" data-lightgallery="group">
-                        <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                            <div class=" video_gallery">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                                    <a href="#">Travel</a>
-                            </div>
-                        </div>
-
-                        
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-                         <div class="cell-xs-10 cell-sm-6 cell-md-4">
-                             <div class=" video_gallery">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
-                                     title="YouTube video player" frameborder="0"
-                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                     allowfullscreen></iframe>
-                                 <a href="#">Travel</a>
-                             </div>
-                         </div>
-
-                        
+						<!----start---->
+						@foreach($photos as $photo)
+							<div class="cell-xs-10 cell-sm-6 cell-md-4">
+								<div class=" video_gallery">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+										<a href="#">Travel</a>
+								</div>
+							</div>
+						@endforeach
+						<!----close--->                       
 
                     </div>
                 </div>
