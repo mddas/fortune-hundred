@@ -72,6 +72,10 @@
                                 </div>
                                 <div class="text-center text-md-left offset-top-20"><button
                                         class="btn btn-icon btn-icon-right" type="submit">Send Message</button></div>
+                                        <p class="submit-message">sucessfully submited
+                            
+                                        </p>
+                                        
                             </form>
                         </div>
                     </div>
