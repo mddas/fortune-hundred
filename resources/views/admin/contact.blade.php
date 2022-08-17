@@ -19,6 +19,9 @@
                 </div>
             </div>
         </section>
+        @if(Session::has('contact'))
+            <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('contact') }}</p>
+        @endif
         <section class="section novi-background bg-cover section-70 section-md-114 bg-default">
             <div class="shell">
                 <div class="range range-65 range-xs-center">
