@@ -304,6 +304,7 @@ class HomeController extends Controller
             return view("website.page_type.album")->with(['slug1'=>$slug1,'albumbs'=>$albumbs,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         if($subcategory_type == "Video Gallery"){//Albumb 
+            return NavigationVideoItems::all();
             $photos = NavigationVideoItems::where('navigation_id',$subcategory_id)->get();
             return $photos;
             return view("website.page_type.video_view")->with(['photos'=>$photos,'slug1'=>$slug1,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
