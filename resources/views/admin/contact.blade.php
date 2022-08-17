@@ -33,6 +33,7 @@
                         <div class="offset-top-30">
                             <form class="rd-mailform text-left" data-form-output="form-output-global"
                                 data-form-type="contact" action="{{route('contactstore')}}" method="POST" class="theme-form-one form-validation" autocomplete="on" enctype='multipart/form-data'>
+                                @csrf
                                 <div class="range range-12">
                                     <div class="cell-sm-12">
                                         <div class="form-group"><label class="form-label form-label-outside"
