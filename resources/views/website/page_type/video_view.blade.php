@@ -33,7 +33,7 @@
 										title="YouTube video player" frameborder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
-										<a href="#">Travel</a>
+										<a href="#">{{$photo->content}}</a>
 								</div>
 							</div>
 						@endforeach
