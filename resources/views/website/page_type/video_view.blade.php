@@ -29,7 +29,7 @@
 						@foreach($photos as $photo)
 							<div class="cell-xs-10 cell-sm-6 cell-md-4">
 								<div class=" video_gallery">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54W1CPCF0"
+									<iframe width="560" height="315" src="{{$photo->link}}"
 										title="YouTube video player" frameborder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
