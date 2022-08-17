@@ -305,7 +305,7 @@ class HomeController extends Controller
         }
         if($subcategory_type == "Video Gallery"){//Albumb 
             //return \DB::connection()->getDatabaseName();
-            return NavigationVideoItems::all();
+            return NavigationItems::all();
             $photos = NavigationVideoItems::where('navigation_id',$subcategory_id)->get();
             // return $subcategory_id;2433
             return $photos;
