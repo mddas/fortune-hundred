@@ -306,8 +306,8 @@ class HomeController extends Controller
         if($subcategory_type == "Video Gallery"){//Albumb 
             // return NavigationVideoItems::all();
             $photos = NavigationVideoItems::where('navigation_id',$subcategory_id)->get();
-            return $subcategory_id;
-            return NavigationVideoItems::all();
+            // return $subcategory_id;2433
+            return $photos;
             return view("website.page_type.video_view")->with(['photos'=>$photos,'slug1'=>$slug1,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Service"){
