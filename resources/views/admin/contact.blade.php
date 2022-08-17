@@ -34,18 +34,18 @@
                             <form class="rd-mailform text-left" data-form-output="form-output-global"
                                 data-form-type="contact" action="{{route('contactstore')}}" method="POST" class="theme-form-one form-validation" autocomplete="on" enctype='multipart/form-data'>
                                 <div class="range range-12">
-                                    <div class="cell-sm-6">
+                                    <div class="cell-sm-12">
                                         <div class="form-group"><label class="form-label form-label-outside"
-                                                for="contact-me-name">First name</label><input
+                                                for="contact-me-name">Full name</label><input
                                                 class="form-control form-validation-inside" id="contact-me-name"
-                                                type="text" name="name"></div>
+                                                type="text" name="name" data-constraints="@Required"></div>
                                     </div>
-                                    <div class="cell-sm-6">
+                                    <!-- <div class="cell-sm-6">
                                         <div class="form-group"><label class="form-label form-label-outside"
                                                 for="contact-me-last-name">Last name</label><input
                                                 class="form-control form-validation-inside" id="contact-me-last-name"
                                                 type="text" name="last-name" data-constraints="@Required"></div>
-                                    </div>
+                                    </div> -->
                                     <div class="cell-sm-6">
                                         <div class="form-group"><label class="form-label form-label-outside"
                                                 for="contact-me-email">E-mail</label><input
@@ -56,7 +56,7 @@
                                         <div class="form-group"><label class="form-label form-label-outside"
                                                 for="contact-me-phone">Phone</label><input
                                                 class="form-control form-validation-inside" id="contact-me-phone"
-                                                type="text" name="number"></div>
+                                                type="text" name="number" data-constraints="@Required"></div>
                                     </div>
                                     <div class="cell-xs-12">
                                         <div class="form-group"><label class="form-label form-label-outside"
