@@ -43838,6 +43838,7 @@ html:not(.lt-ie10) .not-animated {
 .owl-prev,
 .owl-next {
   cursor: pointer;
+  display: none;
 }
 
 /** 3.13 Isotope */
