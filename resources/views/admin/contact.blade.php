@@ -83,7 +83,9 @@
                                         <li><span
                                                 class="icon novi-icon icon-xs text-madison mdi mdi-phone text-middle"></span><a
                                                 class="text-middle inset-left-10 text-dark"
-                                                href="tel:1-800-1234-567">+977-9851026668, ,+977-9815356075,</a></li>
+                                                href="tel:{{$global_setting->phone}}">{{$global_setting->phone}}</a><a
+                                                class="text-middle inset-left-10 text-dark"
+                                                href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -97,13 +99,8 @@
                                         <li><span
                                                 class="icon novi-icon icon-xs text-madison mdi mdi-email-outline text-middle"></span><a
                                                 class="text-primary text-middle inset-left-10"
-                                                href="mailto:info@demolink.org">fortune100.edu.np@gmail.com
+                                                href="mailto:{{$global_setting->site_email}}">{{$global_setting->site_email}}
                                             </a></li>
-                                        <li><span
-                                                class="icon novi-icon icon-xs text-madison mdi mdi-email-outline text-middle"></span><a
-                                                class="text-primary text-middle inset-left-10"
-                                                href="mailto:info@demolink.org">
-                                                kashi@fortune100.edu.np</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -118,7 +115,7 @@
                                                 class="icon novi-icon icon-xs mdi mdi-map-marker text-madison"></span>
                                         </div>
                                         <div class="unit-body">
-                                            <p><a class="text-dark" href="#">Bagbazar-2,Kathnandu ,Napal</a></p>
+                                            <p><a class="text-dark" href="#">{{$global_setting->website_full_address}}</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -152,12 +149,12 @@
                                 <div class="hr bg-gray-light offset-top-10"></div>
                                 <ul class="list-inline list-inline-xs list-inline-madison">
                                     <li><a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled"
-                                            href="#"></a></li>
+                                            href="{{$global_setting->facebook}}"></a></li>
                                     <li><a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled"
-                                            href="#"></a></li>
+                                            href="{{$global_setting->twitter}}"></a></li>
 
                                     <li><a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled"
-                                            href="#"></a></li>
+                                            href="{{$global_setting->other}}"></a></li>
                                 </ul>
                             </div>
                         </aside>
