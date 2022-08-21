@@ -134,7 +134,7 @@
                     <li><a href="/">Home</a></li>
                     @foreach($menus as $menu)
                       <li>
-                        <a href="@if($menu->nav_name=='gallary') # @else {{$menu->nav_name}} @endif">{{$menu->caption}}</a>
+                        <a href="@if($menu->nav_name=='gallary') # @else /{{$menu->nav_name}} @endif">{{$menu->caption}}</a>
                            @if($menu->childs->count()>0)
                             <ul class="rd-navbar-dropdown">
                               @foreach($menu->childs as $submenu)
