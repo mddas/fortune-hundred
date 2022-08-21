@@ -17,13 +17,13 @@ class HomeController extends Controller
         //return $menus->first()->submenus;
         //start Home
         //our service
-         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()!=null){
-            $service_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()->id;
-            $services = Navigation::query()->where('parent_page_id',$service_id)->latest()->get();
-        }
-        else{
-            $services = null;
-        }
+        //  if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()!=null){
+        //     $service_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()->id;
+        //     $services = Navigation::query()->where('parent_page_id',$service_id)->latest()->get();
+        // }
+        // else{
+        //     $services = null;
+        // }
             //our university
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%university%")->where('page_type','Group')->latest()->first()!=null){
             $university_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%university%")->where('page_type','Group')->latest()->first()->id;
@@ -88,7 +88,8 @@ class HomeController extends Controller
             $message = null;
         } 
    
-        $global_setting = GlobalSetting::all()->first(); 
+        $global_setting = GlobalSetting::all()->first();
+        $services = Navigation::query()->where('page_type','Service')->latest()->get(); 
        
         return view("website.index")->with(['events'=>$events,'message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders]);
     }

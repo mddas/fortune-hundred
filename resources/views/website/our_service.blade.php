@@ -23,7 +23,7 @@
                         <div class="post-vacation-body">
                           <div>
                             <h6 class="post-vacation-title">
-                              <a href="/study-abroad">{{$service->caption}}</a>
+                              <a href="/study-abroad/{{$service->nav_name}}">{{$service->caption}}</a>
                             </h6>
                           </div>
                           <div class="offset-lg-top-10">
