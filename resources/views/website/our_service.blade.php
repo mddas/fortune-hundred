@@ -17,7 +17,7 @@
                   @if(isset($services))
                   @foreach($services as $service)
                     <article class="post-vacation">
-                        <a class="post-vacation-img-wrap bg-cover bg-image" href="abroad-study-country.html" style="
+                        <a class="post-vacation-img-wrap bg-cover bg-image" href="/study-abroad/{{$service->nav_name}}" style="
                               background-image: url({{$service->banner_image}});
                             "></a>
                         <div class="post-vacation-body">
