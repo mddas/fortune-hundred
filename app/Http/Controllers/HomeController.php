@@ -89,7 +89,7 @@ class HomeController extends Controller
         } 
    
         $global_setting = GlobalSetting::all()->first();
-        $services = Navigation::query()->where('page_type','Service')->latest()->get(); 
+        $services = Navigation::query()->where('parent_page_id','2327')->where('page_type','Service')->latest()->get(); 
        
         return view("website.index")->with(['events'=>$events,'message'=>$message,'university'=>$university,'testimonials'=>$testimonials,'statistics'=>$statistics,'services'=>$services,'news'=>$news,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders]);
     }
